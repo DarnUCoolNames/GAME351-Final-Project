@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Homeroom.unity
+- path: Assets/Scenes/ArtRoom.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
