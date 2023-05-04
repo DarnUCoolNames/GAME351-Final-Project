@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 5000.0f;
-    public float rotateSpeed = 10000.0f;
+    public float walkSpeed = 70000.0f;
+    public float rotateSpeed = 20000.0f;
 
     public GameObject player;
 
@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
         animController = player.GetComponent<Animator>();
         rb      = GetComponent<Rigidbody>();
     }
+
     void Update()
     {
         // if (Input.GetAxis("Vertical"))

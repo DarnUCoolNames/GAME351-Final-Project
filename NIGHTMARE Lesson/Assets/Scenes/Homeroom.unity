@@ -690,6 +690,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8dee1121417f54dfcb99bc46f8701303, type: 2}
+    - target: {fileID: 9526514, guid: 1d3b1a1513de66247974634911345b98, type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d3b1a1513de66247974634911345b98, type: 3}
 --- !u!4 &457820203 stripped
@@ -7235,7 +7239,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1192291147}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 10
   m_Drag: 10
   m_AngularDrag: 10
   m_UseGravity: 1
@@ -7255,8 +7259,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96ee41473efb4458ac07f1c10202b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walkSpeed: 5000
-  rotateSpeed: 10000
+  walkSpeed: 70000
+  rotateSpeed: 20000
   player: {fileID: 765097858}
 --- !u!4 &1192291151
 Transform:
