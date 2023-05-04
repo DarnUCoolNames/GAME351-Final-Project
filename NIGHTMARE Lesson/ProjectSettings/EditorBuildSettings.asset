@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: 62db74f3baf0a4210901fe67a76babb1
   - enabled: 1
-    path: Assets/Scenes/Homeroom.unity
+    path: Assets/Scenes/School.unity
     guid: 769b9699e0f3444129cbd639b5f2edc8
   - enabled: 1
     path: Assets/Scenes/Hallway.unity
