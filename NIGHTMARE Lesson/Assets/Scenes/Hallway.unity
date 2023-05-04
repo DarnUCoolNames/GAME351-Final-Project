@@ -8184,6 +8184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e96ee41473efb4458ac07f1c10202b02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  walkSpeed: 70000
+  rotateSpeed: 20000
+  player: {fileID: 0}
 --- !u!4 &1307355941
 Transform:
   m_ObjectHideFlags: 0
@@ -8280,7 +8283,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh32932
+  m_Name: pb_Mesh24376
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
