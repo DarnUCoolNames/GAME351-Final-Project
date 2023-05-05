@@ -49,7 +49,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Structure")
+        if(collision.gameObject.tag == "Floor")
         {
             isGrounded = true;
             
