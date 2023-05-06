@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Structure
   - Floor
+  - Evil_Kid
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - Water
   - UI
   - Player
-  - 
-  - 
+  - Bullet
+  - Evil_Kid
   - 
   - 
   - 
