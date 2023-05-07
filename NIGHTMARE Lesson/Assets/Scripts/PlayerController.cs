@@ -69,6 +69,7 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "Trap")
         {
             health -= 2;
+            //add script for slider here 
         }
     }
 }
