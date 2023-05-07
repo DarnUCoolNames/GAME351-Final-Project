@@ -47,6 +47,12 @@ public class PlayerController : MonoBehaviour
             animController.SetBool("Jumped", true);
             animController.SetBool("isGrounded", false);
         }
+
+        if(health < 1)
+        {
+            isAlive = false;
+            animController.SetBool("Dead", true);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -59,6 +65,10 @@ public class PlayerController : MonoBehaviour
         {
             isAlive = false;
             animController.SetBool("Dead", true);
+        }
+        if(collision.gameObject.tag == "Trap")
+        {
+            health -= 2;
         }
     }
 }
