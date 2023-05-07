@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     public float jumpHeight;
     bool isGrounded = true;
     bool isAlive = true;
-    //int health = 10;
+    int health = 10;
 
     public GameObject player;
 
@@ -54,6 +54,11 @@ public class PlayerController : MonoBehaviour
         if(collision.gameObject.tag == "Floor")
         {
             isGrounded = true;
+        }
+        if(collision.gameObject.tag == "Void")
+        {
+            isAlive = false;
+            animController.SetBool("Dead", true);
         }
     }
 }
