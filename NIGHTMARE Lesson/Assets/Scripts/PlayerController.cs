@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    public float walkSpeed = 70000.0f;
-    public float rotateSpeed = 10000.0f;
-    public float jumpHeight;
+    public float walkSpeed = 9000.0f;
+    public float rotateSpeed = 4000.0f;
+    public float jumpHeight = 150.0f;
     bool isGrounded = true;
     bool isAlive = true;
     int health = 10;
