@@ -1,9 +1,13 @@
 sceneSetups:
 - path: Assets/Scenes/School.unity
   isLoaded: 1
-  isActive: 1
+  isActive: 0
   isSubScene: 0
-- path: Assets/Downloaded Assets/SlimUI/Modern Menu 1/Scenes/Demos/Demo1.unity
+- path: Assets/Scenes/MainMenu.unity
   isLoaded: 1
   isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/GameOver.unity
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0
