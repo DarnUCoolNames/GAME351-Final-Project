@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class PlayerController : MonoBehaviour
     {
         animController = player.GetComponent<Animator>();
         rb      = GetComponent<Rigidbody>();
+       // gameOverManager.isGameOver = false;
     }
 
     void Update()
@@ -48,10 +51,10 @@ public class PlayerController : MonoBehaviour
             animController.SetBool("isGrounded", false);
         }
 
-        if(health < 1)
+        if(health < 10)
         {
-            isAlive = false;
-            animController.SetBool("Dead", true);
+           Die();
+
         }
     }
 
@@ -63,13 +66,28 @@ public class PlayerController : MonoBehaviour
         }
         if(collision.gameObject.tag == "Void")
         {
-            isAlive = false;
-            animController.SetBool("Dead", true);
+            // isAlive = false;
+            // animController.SetBool("Dead", true);
+            Die();
         }
         if(collision.gameObject.tag == "Trap")
         {
             health -= 2;
             //add script for slider here 
         }
+    }
+
+    public void Die()
+    {
+        isAlive = false;
+        animController.SetBool("Dead", true);
+        
+        StartCoroutine(GameOverTransition());
+    }
+
+    private IEnumerator GameOverTransition()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene("GameOver");
     }
 }
