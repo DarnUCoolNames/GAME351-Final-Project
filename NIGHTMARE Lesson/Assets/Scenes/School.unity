@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09181083, g: 0.09337396, b: 0.1518588, a: 1}
+  m_IndirectSpecularColor: {r: 0.09181083, g: 0.093374155, b: 0.1518588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -27933,7 +27933,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 70000
   rotateSpeed: 10000
-  jumpHeight: 1000
+  jumpHeight: 100
   player: {fileID: 7042912}
 --- !u!65 &779094925
 BoxCollider:
@@ -27957,7 +27957,7 @@ Rigidbody:
   m_GameObject: {fileID: 779094922}
   serializedVersion: 2
   m_Mass: 10
-  m_Drag: 10
+  m_Drag: 0.1
   m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
