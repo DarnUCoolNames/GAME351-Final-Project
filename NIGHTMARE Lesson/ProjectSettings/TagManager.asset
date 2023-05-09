@@ -8,6 +8,7 @@ TagManager:
   - Floor
   - Evil_Kid
   - Void
+  - Trap
   layers:
   - Default
   - TransparentFX

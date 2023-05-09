@@ -51,7 +51,7 @@ public class PlayerController : MonoBehaviour
             animController.SetBool("isGrounded", false);
         }
 
-        if(health < 10)
+        if(health < 1)
         {
            Die();
 
@@ -70,7 +70,11 @@ public class PlayerController : MonoBehaviour
             // animController.SetBool("Dead", true);
             Die();
         }
-        if(collision.gameObject.tag == "Trap")
+        
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.tag == "Trap")
         {
             health -= 2;
             //add script for slider here 
