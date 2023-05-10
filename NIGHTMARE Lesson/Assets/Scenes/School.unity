@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.09181083, g: 0.093374155, b: 0.1518588, a: 1}
+  m_IndirectSpecularColor: {r: 0.09181083, g: 0.09337396, b: 0.1518588, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7757,7 +7757,7 @@ GameObject:
   - component: {fileID: 156640970}
   - component: {fileID: 156640969}
   m_Layer: 0
-  m_Name: Audio Box
+  m_Name: Audiobox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80634,7 +80634,7 @@ GameObject:
   - component: {fileID: 1234656035}
   - component: {fileID: 1234656034}
   m_Layer: 0
-  m_Name: Audio Box-Cafe
+  m_Name: Audiobox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85264,7 +85264,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh52398
+  m_Name: pb_Mesh28550
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -92438,7 +92438,7 @@ GameObject:
   - component: {fileID: 1613013774}
   - component: {fileID: 1613013773}
   m_Layer: 0
-  m_Name: Audio Box-Art
+  m_Name: Audiobox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
