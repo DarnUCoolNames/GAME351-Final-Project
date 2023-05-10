@@ -8,16 +8,15 @@ using UnityEngine;
 //     public int xPos;
 //     public int zPos;
 //     public int enemyCount;
-
-//     void Start() {
+//     private IEnumerator EnemyDrop();
+//     {
 //         StartCoroutine(EnemyDrop());
 //     }
-    
 //     void OnTriggerEnter(Collider other)
 //     {
 //         if (other.CompareTag("Player"))
 //         {
-//             IEnumerator EnemyDrop()
+//             StartCoroutine(EnemyDrop());
 //             {
 //                 while (enemyCount < 10)
 //                 {
