@@ -9,10 +9,10 @@ using UnityEngine;
 //     public int zPos;
 //     public int enemyCount;
 
-//     void Start()
-//     {
-//     StartCoroutine(EnemyDrop());
+//     void Start() {
+//         StartCoroutine(EnemyDrop());
 //     }
+    
 //     void OnTriggerEnter(Collider other)
 //     {
 //         if (other.CompareTag("Player"))
@@ -24,7 +24,7 @@ using UnityEngine;
 //                     xPos = Random.Range(565, 626);
 //                     zPos = Random.Range(541, 566);
 //                     Instantiate(Bully, new Vector3(xPos, 5.3f, zPos), Quaternion.identity);
-//                     yield return new WaitForSeonds(0.1f);
+//                     yield return new WaitForSeconds(0.1f);
 //                     enemyCount ++;
 //                 }
 //             }
