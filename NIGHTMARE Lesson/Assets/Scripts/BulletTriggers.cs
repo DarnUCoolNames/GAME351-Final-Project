@@ -16,6 +16,10 @@ public class BulletTriggers : MonoBehaviour
             ParticleSystem PurityExplosion = Instantiate(explosion, other.transform.position, Quaternion.identity);
             PurityExplosion.Play();
 
+            GameObject progressBar = GameObject.Find("progressSlider"); 
+            ProgressBar progressBarScript = progressBar.GetComponent<ProgressBar>();
+            progressBarScript.EnemyDestroyed();
+
             GameObject puppetkid = Instantiate(prefab);
             puppetkid.transform.position = other.gameObject.transform.position;
             puppetkid.transform.rotation = other.gameObject.transform.rotation;

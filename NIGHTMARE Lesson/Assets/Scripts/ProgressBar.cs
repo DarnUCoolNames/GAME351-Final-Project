@@ -15,7 +15,7 @@ public class ProgressBar : MonoBehaviour
 
     private void UpdateProgressBar()
     {
-        progressBar.value = (float)enemiesDestroyed / totalEnemies;
+        progressBar.value = enemiesDestroyed;
     }
 }
 
@@ -23,8 +23,11 @@ public class ProgressBar : MonoBehaviour
 /*
 Add this to code where enemies will be deleted 
 
-GameObject progressBar = GameObject.Find("Slider"); // Replace "Slider" with the name of your slider GameObject
+GameObject progressBar = GameObject.Find("progressSlider"); 
 ProgressBar progressBarScript = progressBar.GetComponent<ProgressBar>();
 progressBarScript.EnemyDestroyed();
+
+Build completed with a result of 'Failed' in 7 seconds (6839 ms)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 
 */

@@ -10,14 +10,14 @@ public class AudioSwap : MonoBehaviour
     {
         if(other.CompareTag("PLayer"))
         {
-        AudioManager.instance.SwapTrack(newTrack);
+       // AudioManager.instance.SwapTrack(newTrack);
         }
     }
     private void OntriggerExit(Collider other)
     {
         if(other.CompareTag("PLayer"))
         {
-        AudioManager.instance.ReturnToDefault();
+        //AudioManager.instance.ReturnToDefault();
         }
     }
 }
