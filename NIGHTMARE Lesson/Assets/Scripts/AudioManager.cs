@@ -1,52 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class Example : MonoBehaviour
+public class AudioManager : MonoBehaviour
 {
-    AudioSource Audiobox;
+    public AudioClip defaultAmbience;
+    private AudioSource track01, track02;
+    private bool isPlayingtrack01;
 
-    //Play the music
-    bool m_Play;
-    //Detect when you use the toggle, ensures music isnt played multiple times
-    bool m_ToggleChange;
+    public static AudioManager instance;
 
-    void Start()
+    private void Awake()
     {
-        //Fetch the AudioSource from the GameObject
-        Audiobox = GetComponent<AudioSource>();
-        //Ensure the toggle is set to true for the music to play at start-up
-        m_Play = true;
+        if(instance == null)
+           instance = this;
+
     }
 
-    void Update()
+    private void Start()
     {
-        //Check to see if you just set the toggle to positive
-        if (m_Play == true && m_ToggleChange == true)
-        {
-            //Play the audio you attach to the AudioSource component
-            Audiobox.Play();
-            //Ensure audio doesn’t play more than once
-            m_ToggleChange = false;
-        }
-        //Check if you just set the toggle to false
-        if (m_Play == false && m_ToggleChange == true)
-        {
-            //Stop the audio
-            Audiobox.Stop();
-            //Ensure audio doesn’t play more than once
-            m_ToggleChange = false;
-        }
+        track01 = gameObject.AddComponent<AudioSource>();
+        track02 = gameObject.AddComponent<AudioSource>();
+        isPlayingtrack01 = true;
+
+        SwapTrack(defaultAmbience);
     }
 
-    void OnGUI()
+    public void SwapTrack(AudioClip newClip)
     {
-        //Switch this toggle to activate and deactivate the parent GameObject
-        m_Play = GUI.Toggle(new Rect(10, 10, 100, 30), m_Play, "Play Music");
-
-        //Detect if there is a change with the toggle
-        if (GUI.changed)
+        if (isPlayingtrack01)
         {
-            //Change to true to show that there was just a change in the toggle state
-            m_ToggleChange = true;
+            track02.clip = newClip;
+            track02.Play();
+            track01.Stop();
         }
+        else
+        {
+            track01.clip = newClip;
+            track01.Play();
+            track02.Stop();
+        }
+        isPlayingtrack01 = !isPlayingtrack01;
     }
+
+    public void ReturnToDefault()
+    {
+        SwapTrack(defaultAmbience);
+    }
+
 }
+
