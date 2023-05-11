@@ -1,11 +1,19 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; // Add this namespace
 
 public class ProgressBar : MonoBehaviour
 {
     public Slider progressBar;
-    public int totalEnemies;
+    public int totalEnemies = 10;
     private int enemiesDestroyed;
+    public TextMeshProUGUI completionText;
+
+    private void Start()
+    {
+        completionText.enabled = false;
+    }
+
 
     public void EnemyDestroyed()
     {
@@ -16,6 +24,11 @@ public class ProgressBar : MonoBehaviour
     private void UpdateProgressBar()
     {
         progressBar.value = enemiesDestroyed;
+
+        if (enemiesDestroyed == totalEnemies)
+        {
+            completionText.enabled = true;
+        }
     }
 }
 

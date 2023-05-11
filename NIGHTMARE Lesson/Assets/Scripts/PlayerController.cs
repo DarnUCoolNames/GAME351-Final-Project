@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+using TMPro;
 
 
 public class PlayerController : MonoBehaviour
@@ -13,6 +15,10 @@ public class PlayerController : MonoBehaviour
     bool isAlive = true;
     int health = 10;
 
+    //public Slider healthBar;
+    public TextMeshProUGUI healthText;
+
+
     public GameObject player;
 
     Animator animController;
@@ -22,6 +28,7 @@ public class PlayerController : MonoBehaviour
     {
         animController = player.GetComponent<Animator>();
         rb      = GetComponent<Rigidbody>();
+        UpdateHealthBar();
        // gameOverManager.isGameOver = false;
     }
 
@@ -58,6 +65,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void UpdateHealthBar()
+    {
+        healthText.text = "Health: " + health;
+        //healthBar.value = health;
+    }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Floor")
@@ -66,8 +80,10 @@ public class PlayerController : MonoBehaviour
         }
         if(collision.gameObject.tag == "Void")
         {
-            // isAlive = false;
-            // animController.SetBool("Dead", true);
+    
+            health = 0;
+            UpdateHealthBar();
+            //add script for slider here 
             Die();
         }
         
@@ -77,6 +93,7 @@ public class PlayerController : MonoBehaviour
         if(other.gameObject.tag == "Trap")
         {
             health -= 2;
+            UpdateHealthBar();
             //add script for slider here 
         }
     }
@@ -88,6 +105,7 @@ public class PlayerController : MonoBehaviour
         
         StartCoroutine(GameOverTransition());
     }
+
 
     private IEnumerator GameOverTransition()
     {
