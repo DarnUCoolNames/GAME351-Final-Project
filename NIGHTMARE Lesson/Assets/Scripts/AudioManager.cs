@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip defaultAmbience;
     private AudioSource track01, track02;
     private bool isPlayingtrack01;
+    public float volume = 1.0f;
 
     public static AudioManager instance;
 
